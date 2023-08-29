@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; // Import the React module
+import ExpenseItem from './components/ExpenseItem';
 
 function App() {
+  const expenses = [
+    { title: 'Car Insurance', amount: 294.67, data: new Date(2023, 2, 28) },
+    { title: 'Car Insurance', amount: 294.67, data: new Date(2023, 2, 28) },
+    { title: 'Car Insurance', amount: 294.67, data: new Date(2023, 2, 28) },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Let's get started!</h2>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
